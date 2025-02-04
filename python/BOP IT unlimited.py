@@ -112,5 +112,7 @@ if start=='y':
     time.sleep(0.75)
     print('press the first letter of the word that comes up ')
     game()
+elif start=='n':
+    print("why not")
 else:
-    print('L')  
+    print("start reading")

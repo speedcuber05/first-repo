@@ -1,5 +1,7 @@
 #bop it unlimited rounds
 #flick it, spin it, twist it,bop it,pull it
+#here you will be given a letter, you have to type and enter the letter before the timer runs out or you lose
+#you can call a function for the msgs
 import time
 import random
 import inputimeout   #not a built-in module

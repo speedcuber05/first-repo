@@ -14,4 +14,9 @@ x4=np.hsplit(x,4)  #gives a list of 3 arrays
 for i in x4:
     print(i)
     print()
-    
+
+def fun(a,b):
+    return 10*a + b
+
+a3=np.fromfunction(fun(a,b),(3,4))
+print(a3)

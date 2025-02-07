@@ -18,5 +18,5 @@ for i in x4:
 def fun(a,b):
     return 10*a + b
 
-a3=np.fromfunction(fun(a,b),(3,4))
+a3=np.fromfunction(fun,(3,4))
 print(a3)

@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random as rand
 
-def toss(n):
+def toss(n):     # this is a simulation of a coin toss, n represent the number of times we coin toss per experiment
     i=0    
     coinData=np.empty(n,dtype=str)
     coin=["heads","tails"]
@@ -13,20 +13,22 @@ def toss(n):
         
     return coinData
 
-def iterations(n,N):    
+def iterations(n,N):    #this is the number of times we are repeating the experiment 
     j=0
     data=np.empty(N*n, dtype=str).reshape(N,n)
     while j<N:
         coinData=toss(n)
         data[j]=coinData    
         j+=1
-        if j==N/2:
-            print('50%  of the iternations done')
-    print('iterations done')
+        for w in range(10,101,10):
+            if j==N*w/100:
+                print(w,'% of the iternations done')
+
     
     return data
 
-def count(n,N):
+def count(n,N):       #this counts the number of heads in each experiment
+    print("starting iterations")
     data=iterations(n,N)
     headCount=np.empty(N,dtype=int)
     k=0
@@ -40,24 +42,23 @@ def count(n,N):
     return headCount
 
 
-def graph(n,N):
+def graph(n,N):    #this analyses the number of heads in each experiment and plots the graph
     headCount=count(n,N)
     graphData=np.unique(headCount,return_counts=True)
     headPercent=(graphData[0]/n)*100
     headfrequency=graphData[1]
-    fig, ax=plt.subplots(layout='constrained')
+    fig, ax=plt.subplots()
 
-    ax.bar(headPercent,headfrequency,width=0.1)
+    ax.bar(headPercent,headfrequency,width=0.5)
     ax.set_xlabel("percentage of heads ")
     ax.set_ylabel("frequency of that percentage")    
     ax.set_title("coin toss")
-
+    ax.grid()
     print('showing graph')
-    
     plt.show()
     print('done')
 
-N=50000   #no of iterations
-n=1000   #no of coin tosses in one iterations
+N=100000  #no of iterations
+n=1000    #no of coin tosses in one iterations
 
 graph(n,N)

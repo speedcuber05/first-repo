@@ -49,7 +49,7 @@ def graph(n,N):    #this analyses the number of heads in each experiment and plo
     headfrequency=graphData[1]
     fig, ax=plt.subplots()
 
-    ax.bar(headPercent,headfrequency,width=0.5)
+    ax.bar(headPercent,headfrequency,width=0.2)
     ax.set_xlabel("percentage of heads ")
     ax.set_ylabel("frequency of that percentage")    
     ax.set_title("coin toss")

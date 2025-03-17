@@ -23,8 +23,6 @@ def iterations(n,N):    #this is the number of times we are repeating the experi
         for w in range(10,101,10):
             if j==N*w/100:
                 print(w,'% of the iternations done')
-
-    
     return data
 
 def count(n,N):       #this counts the number of heads in each experiment
@@ -38,7 +36,6 @@ def count(n,N):       #this counts the number of heads in each experiment
         headCount[k]=heads
         k+=1
     print("head count done")
-    
     return headCount
 
 
@@ -49,16 +46,16 @@ def graph(n,N):    #this analyses the number of heads in each experiment and plo
     headfrequency=graphData[1]
     fig, ax=plt.subplots()
 
-    ax.bar(headPercent,headfrequency,width=0.2)
+    bar_width = (headPercent[-1] - headPercent[0]) / len(headPercent)
+    ax.bar(headPercent,headfrequency,width=bar_width,edgecolor='black')
     ax.set_xlabel("percentage of heads ")
     ax.set_ylabel("frequency of that percentage")    
-    ax.set_title("coin toss")
-    ax.grid()
+    ax.set_title("Devansh")
     print('showing graph')
     plt.show()
     print('done')
 
-N=100000  #no of iterations
-n=1000    #no of coin tosses in one iterations
+N=10000  #no of iterations
+n=100   #no of coin tosses in one iterations
 
 graph(n,N)

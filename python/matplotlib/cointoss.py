@@ -47,7 +47,7 @@ def graph(n,N):    #this analyses the number of heads in each experiment and plo
     fig, ax=plt.subplots()
 
     bar_width = (headPercent[-1] - headPercent[0]) / len(headPercent)
-    ax.bar(headPercent,headfrequency,width=bar_width,edgecolor='black')
+    ax.bar(headPercent,headfrequency,width=bar_width,color='skyblue')
     ax.set_xlabel("percentage of heads ")
     ax.set_ylabel("frequency of that percentage")    
     ax.set_title("Devansh")
@@ -55,7 +55,7 @@ def graph(n,N):    #this analyses the number of heads in each experiment and plo
     plt.show()
     print('done')
 
-N=10000  #no of iterations
-n=100   #no of coin tosses in one iterations
+N=100000  #no of iterations
+n=1000  #no of coin tosses in one iteration
 
 graph(n,N)

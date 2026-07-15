@@ -35,7 +35,7 @@ sg3 = (ana*4.5 + em*4.5 + ai*3 + ccn*3 + ot*4 + edp1*3 + dm*2 + apti*2)/26
 print("sg3 = ", sg3)
 print("cg3 = ",(sg1*19 + sg2*18 + sg3*26)/(19+18+26), "\n") 
 
-edp2 = 7
+edp2 = 8
 ethics = 9
 oops = 7
 dsa = 8
@@ -54,7 +54,7 @@ dbms = 9
 dsp = 10
 ict = 10
 aiml = 10
-inno= 10
+inno= 9
 fiber = 10
 aiapp = 8
 
